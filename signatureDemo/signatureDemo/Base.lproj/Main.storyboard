@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enH-CZ-7zD" customClass="PC_SignatureView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptP-U0-VRy">
+                                <rect key="frame" x="30" y="597" width="95" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0as-wg-oUY"/>
+                                </constraints>
+                                <state key="normal" title="清除">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="senderTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eTf-hX-MJU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVb-KS-S6Y">
+                                <rect key="frame" x="140" y="597" width="95" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hux-hZ-ySe"/>
+                                </constraints>
+                                <state key="normal" title="撤销">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="senderTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyH-tJ-t5d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P28-a5-Q5d">
+                                <rect key="frame" x="250" y="597" width="95" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PuK-8N-wLR"/>
+                                </constraints>
+                                <state key="normal" title="确认">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="senderTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sae-sX-afk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P28-a5-Q5d" firstAttribute="leading" secondItem="VVb-KS-S6Y" secondAttribute="trailing" constant="15" id="53f-Po-QIQ"/>
+                            <constraint firstItem="ptP-U0-VRy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="5W9-R4-10x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VVb-KS-S6Y" secondAttribute="bottom" constant="30" id="Fjh-OQ-GVa"/>
+                            <constraint firstItem="VVb-KS-S6Y" firstAttribute="height" secondItem="ptP-U0-VRy" secondAttribute="height" id="Hmh-wH-AMg"/>
+                            <constraint firstItem="VVb-KS-S6Y" firstAttribute="leading" secondItem="ptP-U0-VRy" secondAttribute="trailing" constant="15" id="IiN-sq-CFN"/>
+                            <constraint firstItem="P28-a5-Q5d" firstAttribute="height" secondItem="ptP-U0-VRy" secondAttribute="height" id="JpH-8b-7Hc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P28-a5-Q5d" secondAttribute="trailing" constant="30" id="OqD-lA-Izg"/>
+                            <constraint firstItem="VVb-KS-S6Y" firstAttribute="width" secondItem="ptP-U0-VRy" secondAttribute="width" id="Pkr-xn-r5y"/>
+                            <constraint firstItem="enH-CZ-7zD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aLc-6y-xq9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P28-a5-Q5d" secondAttribute="bottom" constant="30" id="bXI-Dy-sRc"/>
+                            <constraint firstItem="enH-CZ-7zD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d4q-Xt-bDG"/>
+                            <constraint firstItem="P28-a5-Q5d" firstAttribute="width" secondItem="ptP-U0-VRy" secondAttribute="width" id="djw-xx-x7h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ptP-U0-VRy" secondAttribute="bottom" constant="30" id="kgT-79-dMj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="enH-CZ-7zD" secondAttribute="bottom" constant="150" id="ocK-JE-Q45"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="enH-CZ-7zD" secondAttribute="trailing" id="p9z-Oh-KN9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="signatureView" destination="enH-CZ-7zD" id="8FB-xA-wMe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
