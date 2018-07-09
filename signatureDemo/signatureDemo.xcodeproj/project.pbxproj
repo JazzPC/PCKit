@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		0CBADFD020EF0EB700AEC161 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBADFCF20EF0EB700AEC161 /* AppDelegate.m */; };
 		0CBADFD320EF0EB700AEC161 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBADFD220EF0EB700AEC161 /* ViewController.m */; };
-		0CBADFD620EF0EB700AEC161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBADFD420EF0EB700AEC161 /* Main.storyboard */; };
 		0CBADFD820EF0EB800AEC161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBADFD720EF0EB800AEC161 /* Assets.xcassets */; };
 		0CBADFDB20EF0EB800AEC161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBADFD920EF0EB800AEC161 /* LaunchScreen.storyboard */; };
 		0CBADFDE20EF0EB800AEC161 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBADFDD20EF0EB800AEC161 /* main.m */; };
 		0CBADFE620EF0F0500AEC161 /* PC_SignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBADFE520EF0F0500AEC161 /* PC_SignatureView.m */; };
 		0CBADFE920EF37F800AEC161 /* PC_DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBADFE820EF37F800AEC161 /* PC_DrawView.m */; };
+		0CBADFF320F30B4B00AEC161 /* SignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBADFF120F30B4B00AEC161 /* SignatureViewController.m */; };
+		0CBADFF420F30B4B00AEC161 /* SignatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBADFF220F30B4B00AEC161 /* SignatureViewController.xib */; };
+		0CBADFFA20F310DD00AEC161 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBADFF820F310DD00AEC161 /* MenuViewController.m */; };
+		0CBADFFE20F342A500AEC161 /* PC_MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBADFFD20F342A500AEC161 /* PC_MenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +26,6 @@
 		0CBADFCF20EF0EB700AEC161 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0CBADFD120EF0EB700AEC161 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0CBADFD220EF0EB700AEC161 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0CBADFD520EF0EB700AEC161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CBADFD720EF0EB800AEC161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CBADFDA20EF0EB800AEC161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CBADFDC20EF0EB800AEC161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +34,13 @@
 		0CBADFE520EF0F0500AEC161 /* PC_SignatureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PC_SignatureView.m; sourceTree = "<group>"; };
 		0CBADFE720EF37F800AEC161 /* PC_DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PC_DrawView.h; sourceTree = "<group>"; };
 		0CBADFE820EF37F800AEC161 /* PC_DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PC_DrawView.m; sourceTree = "<group>"; };
+		0CBADFF020F30B4B00AEC161 /* SignatureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignatureViewController.h; sourceTree = "<group>"; };
+		0CBADFF120F30B4B00AEC161 /* SignatureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignatureViewController.m; sourceTree = "<group>"; };
+		0CBADFF220F30B4B00AEC161 /* SignatureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignatureViewController.xib; sourceTree = "<group>"; };
+		0CBADFF720F310DD00AEC161 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		0CBADFF820F310DD00AEC161 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		0CBADFFC20F342A500AEC161 /* PC_MenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PC_MenuView.h; sourceTree = "<group>"; };
+		0CBADFFD20F342A500AEC161 /* PC_MenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PC_MenuView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +57,7 @@
 		0CBADFC220EF0EB600AEC161 = {
 			isa = PBXGroup;
 			children = (
+				0CBADFF520F3109D00AEC161 /* MenuView */,
 				0CBADFEB20EF4BFF00AEC161 /* SignatureView */,
 				0CBADFEA20EF4B0100AEC161 /* DrawView */,
 				0CBADFCD20EF0EB700AEC161 /* signatureDemo */,
@@ -66,11 +76,12 @@
 		0CBADFCD20EF0EB700AEC161 /* signatureDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0CBADFF620F310B000AEC161 /* MenuController */,
+				0CBADFEC20F30AE800AEC161 /* SignatureController */,
 				0CBADFCE20EF0EB700AEC161 /* AppDelegate.h */,
 				0CBADFCF20EF0EB700AEC161 /* AppDelegate.m */,
 				0CBADFD120EF0EB700AEC161 /* ViewController.h */,
 				0CBADFD220EF0EB700AEC161 /* ViewController.m */,
-				0CBADFD420EF0EB700AEC161 /* Main.storyboard */,
 				0CBADFD720EF0EB800AEC161 /* Assets.xcassets */,
 				0CBADFD920EF0EB800AEC161 /* LaunchScreen.storyboard */,
 				0CBADFDC20EF0EB800AEC161 /* Info.plist */,
@@ -95,6 +106,34 @@
 				0CBADFE520EF0F0500AEC161 /* PC_SignatureView.m */,
 			);
 			path = SignatureView;
+			sourceTree = "<group>";
+		};
+		0CBADFEC20F30AE800AEC161 /* SignatureController */ = {
+			isa = PBXGroup;
+			children = (
+				0CBADFF020F30B4B00AEC161 /* SignatureViewController.h */,
+				0CBADFF120F30B4B00AEC161 /* SignatureViewController.m */,
+				0CBADFF220F30B4B00AEC161 /* SignatureViewController.xib */,
+			);
+			path = SignatureController;
+			sourceTree = "<group>";
+		};
+		0CBADFF520F3109D00AEC161 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				0CBADFFC20F342A500AEC161 /* PC_MenuView.h */,
+				0CBADFFD20F342A500AEC161 /* PC_MenuView.m */,
+			);
+			path = MenuView;
+			sourceTree = "<group>";
+		};
+		0CBADFF620F310B000AEC161 /* MenuController */ = {
+			isa = PBXGroup;
+			children = (
+				0CBADFF720F310DD00AEC161 /* MenuViewController.h */,
+				0CBADFF820F310DD00AEC161 /* MenuViewController.m */,
+			);
+			path = MenuController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +194,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CBADFDB20EF0EB800AEC161 /* LaunchScreen.storyboard in Resources */,
+				0CBADFF420F30B4B00AEC161 /* SignatureViewController.xib in Resources */,
 				0CBADFD820EF0EB800AEC161 /* Assets.xcassets in Resources */,
-				0CBADFD620EF0EB700AEC161 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,8 +207,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CBADFE620EF0F0500AEC161 /* PC_SignatureView.m in Sources */,
+				0CBADFF320F30B4B00AEC161 /* SignatureViewController.m in Sources */,
 				0CBADFD320EF0EB700AEC161 /* ViewController.m in Sources */,
 				0CBADFDE20EF0EB800AEC161 /* main.m in Sources */,
+				0CBADFFA20F310DD00AEC161 /* MenuViewController.m in Sources */,
+				0CBADFFE20F342A500AEC161 /* PC_MenuView.m in Sources */,
 				0CBADFD020EF0EB700AEC161 /* AppDelegate.m in Sources */,
 				0CBADFE920EF37F800AEC161 /* PC_DrawView.m in Sources */,
 			);
@@ -178,14 +220,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0CBADFD420EF0EB700AEC161 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0CBADFD520EF0EB700AEC161 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0CBADFD920EF0EB800AEC161 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

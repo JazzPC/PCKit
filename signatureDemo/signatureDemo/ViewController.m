@@ -7,60 +7,60 @@
 //
 
 #import "ViewController.h"
-#import "PC_SignatureView.h"
-#import "PC_DrawView.h"
-@interface ViewController ()
-@property (weak, nonatomic) IBOutlet PC_SignatureView *signatureView;
-- (IBAction)senderTouch:(UIButton *)sender;
-@property (nonatomic, strong) UIImageView *signatureImageView;
-@property (nonatomic, strong) PC_DrawView *signatureDrawView;
+#import "SignatureViewController.h"
+#import "MenuViewController.h"
+
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, copy) NSArray *dataArray;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.signatureDrawView = [[PC_DrawView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    self.signatureDrawView.rotationEnable = YES;
-    self.signatureDrawView.hidden = YES;
-    [self.view addSubview:self.signatureDrawView];
-    [self.view bringSubviewToFront:self.signatureDrawView];
-    
-    self.signatureImageView = [[UIImageView alloc] initWithFrame:self.signatureDrawView.bounds];
-    self.signatureImageView.contentMode = UIViewContentModeScaleAspectFill;
-    [self.signatureDrawView addSubview:self.signatureImageView];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.rowHeight = 44;
+    [self.view addSubview:self.tableView];
+    self.dataArray = @[@"签名",@"下拉菜单"];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (IBAction)senderTouch:(UIButton *)sender {
-    switch (sender.tag) {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellID = @"cellID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 0:
+            {
+                [self.navigationController pushViewController:[SignatureViewController new] animated:YES];
+            }
+            break;
         case 1:
         {
-            //清除
-            [self.signatureView pc_cleanSignature];
-            
-        }
-            break;
-        case 2:
-        {
-            //撤销
-            [self.signatureView pc_revocationSignature];
-        }
-            break;
-        case 3:
-        {
-            //确认
-            UIImage *image = [self.signatureView pc_configSignature];
-            
-            UIImage *image1 = [self.signatureView pc_waterImageWithImage:image text:@"微信" textRect:CGRectMake(30, 100, 100, 40) attribute:@{NSFontAttributeName:[UIFont systemFontOfSize:40],NSForegroundColorAttributeName:[UIColor redColor]}];
-            self.signatureImageView.image = [self.signatureView pc_waterImageWithImage:image1 waterImage:[UIImage imageNamed:@"icon_weixin_p"] rect:CGRectMake(200, 300, 180, 180)];
-            self.signatureDrawView.hidden = NO;
+            [self.navigationController pushViewController:[MenuViewController new] animated:YES];
         }
             break;
         default:
             break;
     }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
